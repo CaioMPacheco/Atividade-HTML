@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.ibb.co/FHjr5KD/189992941-cone-de-vetor-de-calculadora-eletr-nica-calculadora-para-dados-de-matem-tica-renda-finan-a.png">
+    <title>Calculadora IMC</title>
+    <style>
+        body h1 {
+            display: grid;
+            place-items: center;
+        }
+
+        .elementos {
+            margin-top: -450px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            font-size: larger;
+        }
+
+        .resultado {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            text-align: center;
+            display: none; /* Inicialmente oculto */
+        }
+
+        #fecharResultado {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #fecharResultado:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="index.html">CALCULADORA IMC</a></h1>
+    <div class="container">
+        <aside class="aside">
+            <a href="cadastro.php">Cadastrar</a>
+            <a href="fotos.html">Fotos do autor</a>
+            <a href="localização.html">Ver localização</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caiopacheco0730@gmail.com" target="_blank">Mandar Email</a>
+            <a class="botãocada1" onclick="fechar()">Sair</a>
+        </aside>
+    </div>
+    <div class="elementos">
+        <label for="idade">Digite sua idade</label>
+        <input type="number" id="idade" min="0" max="120">
+        <label for="altura">Digite sua altura (em centímetros)</label>
+        <input type="number" id="altura" min="0" max="500">
+        <label for="peso">Digite seu peso (em Kg)</label>
+        <input type="number" id="peso" min="0" max="1000">
+        <a href="#" id="calcular" class="botão">Calcular</a>
+    </div>
+
+    <div id="resultado" class="resultado">
+        <span id="mensagem"></span>
+        <button id="fecharResultado">Fechar</button>
+    </div>
+
+    <script>
+        document.getElementById("calcular").addEventListener("click", function() {
+            const idade = document.getElementById("idade").value;
+            const altura = document.getElementById("altura").value / 100; // converter para metros
+            const peso = document.getElementById("peso").value;
+
+            if (!idade || !altura || !peso) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Cálculo do IMC
+            const imc = peso / (altura * altura);
+            let mensagem = "";
+            let cor = "";
+
+            if (imc < 24.9) {
+                mensagem = "Peso bom!";
+                cor = "green";
+            } else if (imc < 29.9) {
+                mensagem = "Sobrepeso!";
+                cor = "yellow";
+            } else {
+                mensagem = "Obesidade!";
+                cor = "red";
+            }
+
+            // Mostrar a tela de resultado
+            const resultado = document.getElementById("resultado");
+            const mensagemElemento = document.getElementById("mensagem");
+            resultado.style.display = "flex";
+            mensagemElemento.innerText = mensagem;
+            resultado.style.backgroundColor = cor;
+
+            // Limpar os campos
+            document.getElementById("idade").value = "";
+            document.getElementById("altura").value = "";
+            document.getElementById("peso").value = "";
+        });
+
+        // Fechar a tela de resultado
+        document.getElementById("fecharResultado").addEventListener("click", function() {
+            document.getElementById("resultado").style.display = "none";
+        });
+
+        // Botão Sair
+        function fechar() {
+            window.location.href = "saida.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.ibb.co/FHjr5KD/189992941-cone-de-vetor-de-calculadora-eletr-nica-calculadora-para-dados-de-matem-tica-renda-finan-a.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro</title>
+</head>
+<body id="inicio">
+  <h1><a href="index.html">CALCULADORA IMC</a></h1>
+  <div class="container">
+    <aside class="aside">
+            <a href="cadastro.php">Cadastrar</a>
+            <a href="fotos.html">Fotos do autor</a>
+            <a href="localização.html">Ver localização</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caiopacheco0730@gmail.com" target="_blank">Mandar Email</a>
+            <a class="botãocada1" onclick="fechar()">Sair</a>
+    </aside>
+</div>
+<div class="container1">
+  <form action="cadastrar.php" method="POST">
+    Usuário<input id="usuario" name="usuario" type="text" placeholder="Usuário" required></input>
+    Telefone<input id="telefone" name="telefone" type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="Telefone" required></input>
+    Email<input id="email" name="email" type="text" placeholder="Email" required></input>
+    CPF<input id="CPF" name="CPF" type="text" maxlength="14" min="0" autocomplete="off" placeholder="CPF" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" required></input>
+    Senha<input id="senha" name="senha" type="password" maxlength="12" placeholder="Senha" required></input>
+    <button type="submit" id="BOTAO" class="botãocada">Cadastrar</button>
+  </form>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

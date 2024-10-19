@@ -1,0 +1,273 @@
+body h1{
+    display: grid;
+    place-items: center;
+}
+
+.elementos{
+    margin-top: -450px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    font-size: larger;
+}
+
+.elementos label {
+    margin-bottom: 5px; /* Margem inferior do label para ficar grudado no textarea */
+}
+
+.elementos textarea {
+    width: 200px;  /* Definindo uma largura fixa */
+    height: 30px;  /* Definindo uma altura fixa */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px black;
+    font-size: 14px;
+    resize: none;  /* Impede o redimensionamento */
+}
+
+.botão{
+    display: inline-block;  /* Faz com que o link se comporte como um bloco */
+    padding: 10px 20px;  /* Espaçamento interno */
+    background-color: #007BFF;  /* Cor de fundo */
+    color: white;  /* Cor do texto */
+    border: none;  /* Remove bordas padrão */
+    border-radius: 6px;  /* Bordas arredondadas */
+    text-align: center;  /* Centraliza o texto */
+    text-decoration: none;  /* Remove o sublinhado */
+    cursor: pointer;  /* Mostra o cursor de "mãozinha" */
+    font-size: 16px;  /* Ajusta o tamanho da fonte */
+  }
+  
+.botão:hover {
+    background-color: #0056b3;  /* Cor de fundo ao passar o mouse */
+}
+
+.elementos input[type="number"] {
+    width: 100px;  /* Definindo uma largura fixa */
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+.elementos input[type="number"]::-webkit-inner-spin-button,.elementos input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+#img{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    left: 65%;
+    filter: drop-shadow(30px 30px 10px gray);
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;  /* Garante que os links fiquem um abaixo do outro */
+    align-items: center;  /* Centraliza os links horizontalmente */
+}
+
+.aside a{
+    display: inline-block;  /* Faz com que cada link ocupe uma linha inteira */
+    text-decoration: none;  /* Remove o sublinhado dos links (opcional) */
+    line-height: 100px;
+    padding: 0;
+    font-size: 20px;
+}
+
+.container{
+    border: 2px solid #333;
+    width: 200px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px black;
+    background-color: aliceblue;
+}
+
+input{
+    box-shadow: 3px 3px 10px gray;
+}
+
+.estevao, .ana, .caitanopolis{
+    height: 400px;
+    border-radius: 10%;
+    transition: all 0.1s linear;
+}
+
+.fotos{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border: 2px solid #333;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 4px 10px black;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.estevao:hover, .ana:hover, .caitanopolis:hover{
+    transform: scale(1.2) ;
+    border-radius: 20%;
+}
+
+a{
+    text-decoration: none;
+    color: black;    
+}
+
+
+
+/* Parte do cadastro */
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;  /* Ajusta a altura dinamicamente ao conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 45px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px black;
+    background-color: aliceblue;
+    padding: 20px;  /* Adiciona espaçamento interno */
+}
+
+#usuario, #CPF, #telefone, #email, #senha {
+    width: 100%;  /* Aumenta a largura para ocupar mais espaço horizontal */
+    height: 40px;
+    box-shadow: 2px 3px black;
+    border-radius: 30px;
+    margin-bottom: 50px;  /* Adiciona espaçamento entre os campos */
+    text-align: center;
+}
+
+.botãocada {
+    width: 50%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 2px 3px black;
+}
+
+#inicio{
+    background-image: url("https://img.freepik.com/fotos-gratis/plano-de-luxo-verde-gradiente-abstrato-estudio-fundo-vazio-sala-com-espaco-para-seu-texto-e-imagem_1258-71017.jpg?semt=ais_hybrid");
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 40px;
+    position: absolute;
+    left: 65%;
+}
+
+
+
+
+/*Localização*/
+.containermapa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px  solid black;
+    box-shadow: 0 4px 10px black;   
+}
+
+.botãocada1:hover {
+    background-color: #01682c;  /* Cor de fundo ao passar o mouse */}
+
+/*Sair*/
+
+.imgjoia{
+    width: 30%;
+}
+
+.containersaida{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px  solid black;
+    box-shadow: 0 4px 10px black;   
+}
+
+.botãocada1{
+    padding: 100px;
+    width: 50%;
+    height: 95px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    place-items: center;
+}
+
+
+.resultado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+}
+
+#fecharResultado {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#fecharResultado:hover {
+    background-color: lightgray;
+}
+
